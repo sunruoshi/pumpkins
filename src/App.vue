@@ -51,9 +51,6 @@ body {
 .tag {
   margin-right: 10px;
 }
-.overflow {
-  overflow: auto;
-}
 .chart {
   width: 100%;
   height: 400px;

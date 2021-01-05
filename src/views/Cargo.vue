@@ -36,13 +36,12 @@
           type="flex"
           align="middle"
           justify="start"
-          class="row-margin overflow"
         >
           <el-tag
             type="info"
             v-for="index in sizeData.length"
             :key="index"
-            class="tag"
+            class="row-margin tag"
           >
             {{ sizeData[index - 1].property
             }}<strong> ¥{{ sizeData[index - 1].value }}</strong>
