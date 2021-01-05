@@ -16,10 +16,12 @@
           </div>
           <el-row>
             <el-col v-for="index in starList.length" :key="index">
-              <Card
-                :form="starList[index - 1]"
-                v-if="starList.indexOf(starList[index - 1]) !== -1"
-              />
+              <el-space size="large" direction="vertical">
+                <Card
+                  :form="starList[index - 1]"
+                  v-if="starList.indexOf(starList[index - 1]) !== -1"
+                />
+              </el-space>
             </el-col>
           </el-row>
         </el-collapse-item>

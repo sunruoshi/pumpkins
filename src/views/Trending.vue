@@ -19,8 +19,11 @@
             :xs="12"
             v-for="index in list.length"
             :key="index"
+            class="card-group"
           >
-            <Card :form="list[index - 1]" />
+            <el-space wrap size="large">
+              <Card :form="list[index - 1]" />
+            </el-space>
           </el-col>
         </el-row>
       </div>

@@ -17,16 +17,18 @@
         <el-card v-if="starData.source.length > 0">
           <Chart id="starlist" :dataset="starData" :series="series" />
         </el-card>
-        <el-divider v-if="starList.length > 0"></el-divider>
-        <el-row>
+        <el-row class="row-margin">
           <el-col
             :xl="4"
             :md="6"
             :xs="12"
             v-for="index in starList.length"
             :key="index"
+            class="card-group"
           >
-            <Card :form="starList[index - 1]" />
+            <el-space wrap size="large">
+              <Card :form="starList[index - 1]" />
+            </el-space>
           </el-col>
         </el-row>
       </div>

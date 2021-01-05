@@ -43,8 +43,11 @@
             :xs="12"
             v-for="index in starList.length"
             :key="index"
+            class="card-group"
           >
-            <Card :form="starList[index - 1]" />
+            <el-space wrap size="large">
+              <Card :form="starList[index - 1]" />
+            </el-space>
           </el-col>
         </el-row>
       </div>

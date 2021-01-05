@@ -45,6 +45,9 @@ body {
 .row-margin {
   margin-top: 20px;
 }
+.card-group {
+  margin-bottom: 16px;
+}
 .tag {
   margin-right: 10px;
 }

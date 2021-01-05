@@ -14,16 +14,18 @@
         <el-card v-if="productData.source.length > 0">
           <Chart id="product" :dataset="productData" :series="series" />
         </el-card>
-        <el-divider></el-divider>
-        <el-row>
+        <el-row class="row-margin">
           <el-col
             :xl="4"
             :md="6"
             :xs="12"
             v-for="index in productList.length"
             :key="index"
+            class="card-group"
           >
-            <Card :form="productList[index - 1]" />
+            <el-space wrap size="large">
+              <Card :form="productList[index - 1]" />
+            </el-space>
           </el-col>
         </el-row>
       </div>
