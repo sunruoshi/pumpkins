@@ -34,6 +34,7 @@
             :description="consoleLog[index].description"
             :type="consoleLog[index].type"
             show-icon
+            class="alert"
           >
           </el-alert>
         </el-collapse-item>

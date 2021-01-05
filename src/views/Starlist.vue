@@ -72,7 +72,7 @@ export default {
       this.$store.dispatch("starData/getStar", this.starList);
     }
   },
-  mounted: function() {
+  mounted() {
     this.$store.dispatch("starData/getStar", this.starList);
   }
 };

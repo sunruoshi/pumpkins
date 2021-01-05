@@ -42,14 +42,10 @@
                 min-width="90"
                 sortable
               >
-                <template #default="scope" v-if="scope.row.stockX !== undefined"
-                  >¥{{ scope.row.stockX }}</template
-                >
+                <template v-slot="scope">¥{{ scope.row.stockX }}</template>
               </el-table-column>
               <el-table-column prop="goat" label="Goat" min-width="80" sortable>
-                <template #default="scope" v-if="scope.row.goat !== undefined"
-                  >¥{{ scope.row.goat }}</template
-                >
+                <template v-slot="scope">¥{{ scope.row.goat }}</template>
               </el-table-column>
               <el-table-column
                 prop="stadiumGoods"
@@ -57,9 +53,7 @@
                 min-width="130"
                 sortable
               >
-                <template
-                  #default="scope"
-                  v-if="scope.row.stadiumGoods !== undefined"
+                <template v-slot="scope"
                   >¥{{ scope.row.stadiumGoods }}</template
                 >
               </el-table-column>
@@ -71,7 +65,7 @@
               >
               </el-table-column>
               <el-table-column label="操作" width="100">
-                <template #default="scope">
+                <template v-slot="scope">
                   <el-button
                     size="mini"
                     type="success"

@@ -24,13 +24,7 @@
           @click="removeStar(form)"
         ></el-button>
       </el-row>
-      <el-image
-        :src="form.thumbnail"
-        v-loading="!isLoad"
-        @load="imgLoaded()"
-        fit="contain"
-      >
-      </el-image>
+      <el-image :src="form.thumbnail" fit="contain"> </el-image>
       <div>
         <el-row type="flex" justify="space-between" align="middle">
           <p>
@@ -58,7 +52,7 @@
       <el-collapse>
         <el-collapse-item>
           <template v-slot:title>
-            更多信息<i class="header-icon el-icon-info"></i>
+            更多信息<i class="el-icon-info"></i>
           </template>
           <h3>{{ form.shoeName }}</h3>
           <p>货号: {{ form.styleID }}</p>
@@ -79,11 +73,6 @@ export default {
   props: {
     form: Object
   },
-  data() {
-    return {
-      isLoad: false
-    };
-  },
   computed: {
     ...mapState({
       starList: state => state.starList,
@@ -91,9 +80,6 @@ export default {
     })
   },
   methods: {
-    imgLoaded() {
-      this.isLoad = true;
-    },
     getPrice(id) {
       this.$router.push({ name: "price" });
       this.$store.dispatch("price/getPrice", id);

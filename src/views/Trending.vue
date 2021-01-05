@@ -66,7 +66,7 @@ export default {
     })
   },
   methods: {},
-  created: function() {
+  created() {
     if (this.list.length === 0) {
       this.$store.dispatch("trending/fetchTrending");
     }
