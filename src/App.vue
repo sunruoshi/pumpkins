@@ -1,30 +1,58 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <el-container>
+    <div id="app" class="app">
+      <router-view name="Header" />
+      <router-view name="Main" />
+      <el-backtop target=".app"></el-backtop>
+    </div>
+  </el-container>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.app {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Helvetica Neue", "PingFang SC";
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body {
+  margin: 0;
+}
+.main {
+  min-height: 100%;
+}
+.muted {
+  color: #909399;
+}
+.aside {
+  padding: 20px;
+}
+.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+}
+.empty {
+  height: 100%;
+}
+.alert {
+  margin-bottom: 5px;
+}
+.badge-corner {
+  margin-top: 10px;
+}
+.loading {
+  height: 80vh;
+}
+.row-margin {
+  margin-top: 20px;
+}
+.tag {
+  margin-right: 10px;
+}
+.overflow {
+  overflow: auto;
+}
+.chart {
+  width: 100%;
+  height: 400px;
 }
 </style>

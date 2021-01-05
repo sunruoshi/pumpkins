@@ -1,20 +1,57 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    components: {
+      Main: () => import(/* webpackChunkName: "main" */ "../views/Main.vue"),
+      Header: () =>
+        import(/* webpackChunkName: "header" */ "../views/Header.vue")
+    },
+    children: [
+      {
+        path: "/",
+        name: "index",
+        component: () =>
+          import(/* webpackChunkName: "index" */ "../views/Index.vue")
+      },
+      {
+        path: "trending",
+        name: "trending",
+        component: () =>
+          import(/* webpackChunkName: "trending" */ "../views/Trending.vue")
+      },
+      {
+        path: "product",
+        name: "product",
+        component: () =>
+          import(
+            /* webpackChunkName: "product-list" */ "../views/Productlist.vue"
+          ),
+        props: true
+      },
+      {
+        path: "price",
+        name: "price",
+        component: () =>
+          import(/* webpackChunkName: "price-list" */ "../views/Pricelist.vue"),
+        props: true
+      },
+      {
+        path: "starlist",
+        name: "starlist",
+        component: () =>
+          import(/* webpackChunkName: "star-list" */ "../views/Starlist.vue"),
+        props: true
+      },
+      {
+        path: "cargo",
+        name: "cargo",
+        component: () =>
+          import(/* webpackChunkName: "cargo" */ "../views/Cargo.vue"),
+        props: true
+      }
+    ]
   }
 ];
 
