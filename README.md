@@ -1,24 +1,13 @@
-# pumpkins
+## 轻型球鞋数据查询工具
 
-## Project setup
-```
-npm install
-```
+### Homepage
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<https://pumpkins.vercel.app/>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Local Dev
 
-### Lints and fixes files
-```
-npm run lint
-```
+- 克隆项目到本地目录；
+- 打开项目文件夹，运行 ```npm install```；
+- 运行 ```npm run serve```；
+- 浏览器打开 ```http://localhost:8080/ ```;
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
