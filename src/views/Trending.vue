@@ -12,7 +12,7 @@
         <Chart id="trending" :dataset="trendData" :series="series" />
       </el-card>
       <div class="row-margin">
-        <el-row>
+        <el-row :gutter="16">
           <el-col
             :xl="4"
             :md="6"
@@ -21,9 +21,7 @@
             :key="index"
             class="card-group"
           >
-            <el-space wrap size="large">
-              <Card :form="list[index - 1]" />
-            </el-space>
+            <Card :form="list[index - 1]" />
           </el-col>
         </el-row>
       </div>

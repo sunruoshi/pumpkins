@@ -36,7 +36,7 @@
             <p class="muted">无内容</p>
           </el-row>
         </div>
-        <el-row>
+        <el-row :gutter="16">
           <el-col
             :xl="4"
             :md="6"
@@ -45,9 +45,7 @@
             :key="index"
             class="card-group"
           >
-            <el-space wrap size="large">
-              <Card :form="starList[index - 1]" />
-            </el-space>
+            <Card :form="starList[index - 1]" />
           </el-col>
         </el-row>
       </div>

@@ -17,7 +17,7 @@
         <el-card v-if="starData.source.length > 0">
           <Chart id="starlist" :dataset="starData" :series="series" />
         </el-card>
-        <el-row class="row-margin">
+        <el-row class="row-margin" :gutter="16">
           <el-col
             :xl="4"
             :md="6"
@@ -26,9 +26,7 @@
             :key="index"
             class="card-group"
           >
-            <el-space wrap size="large">
-              <Card :form="starList[index - 1]" />
-            </el-space>
+            <Card :form="starList[index - 1]" />
           </el-col>
         </el-row>
       </div>

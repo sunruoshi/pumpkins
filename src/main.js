@@ -30,7 +30,6 @@ import {
   ElImage,
   ElBacktop,
   ElPageHeader,
-  ElSpace,
   ElSkeleton,
   ElLoading,
   ElMessage
@@ -57,7 +56,6 @@ const components = [
   ElMenuItem,
   ElPageHeader,
   ElRow,
-  ElSpace,
   ElSkeleton,
   ElTabPane,
   ElTable,

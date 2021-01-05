@@ -14,7 +14,7 @@
         <el-card v-if="productData.source.length > 0">
           <Chart id="product" :dataset="productData" :series="series" />
         </el-card>
-        <el-row class="row-margin">
+        <el-row class="row-margin" :gutter="16">
           <el-col
             :xl="4"
             :md="6"
@@ -23,9 +23,7 @@
             :key="index"
             class="card-group"
           >
-            <el-space wrap size="large">
-              <Card :form="productList[index - 1]" />
-            </el-space>
+            <Card :form="productList[index - 1]" />
           </el-col>
         </el-row>
       </div>
