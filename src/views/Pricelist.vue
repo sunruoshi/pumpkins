@@ -8,7 +8,14 @@
         <el-card class="row-margin"><el-skeleton :rows="5" animated/></el-card>
       </div>
       <div v-if="!isLoading">
-        <el-tabs type="border-card">
+        <el-card>
+          <strong>{{ info.shoeName }}</strong>
+          <p>货号: {{ info.styleID }}</p>
+          <p>品牌: {{ info.brand }}</p>
+          <p>配色: {{ info.colorway }}</p>
+          <p>发售日期: {{ info.releaseDate }}</p>
+        </el-card>
+        <el-tabs type="border-card" class="row-margin">
           <el-tab-pane :lazy="true">
             <template #label>
               <span><i class="el-icon-monitor"></i> 价格图表</span>

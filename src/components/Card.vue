@@ -27,7 +27,7 @@
       <el-image :src="form.thumbnail" fit="contain"> </el-image>
       <div>
         <el-row type="flex" justify="space-between" align="middle">
-          <p>
+          <span>
             <el-badge
               value="StockX 最低"
               type="success"
@@ -36,7 +36,7 @@
             <strong v-if="form.lowestResellPrice">
               {{ form.lowestResellPrice.stockX }}</strong
             >
-          </p>
+          </span>
           <el-badge
             v-if="form.profit"
             :value="`¥${form.priceVariety}`"
@@ -49,18 +49,6 @@
           ></el-badge>
         </el-row>
       </div>
-      <el-collapse>
-        <el-collapse-item>
-          <template v-slot:title>
-            更多信息<i class="el-icon-info"></i>
-          </template>
-          <h3>{{ form.shoeName }}</h3>
-          <p>货号: {{ form.styleID }}</p>
-          <p>品牌: {{ form.brand }}</p>
-          <p>配色: {{ form.colorway }}</p>
-          <p>发售日期: {{ form.releaseDate }}</p>
-        </el-collapse-item>
-      </el-collapse>
     </el-card>
   </div>
 </template>
