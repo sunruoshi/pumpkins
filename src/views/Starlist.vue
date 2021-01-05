@@ -1,13 +1,10 @@
 <template>
   <el-container>
     <el-main>
-      <div
-        v-if="isLoading"
-        v-loading="isLoading"
-        element-loading-text="数据加载中"
-        element-loading-spinner="el-icon-loading"
-        class="loading"
-      ></div>
+      <div v-if="isLoading">
+        <el-card><el-skeleton :rows="5" animated/></el-card>
+        <el-card class="row-margin"><el-skeleton :rows="5" animated/></el-card>
+      </div>
       <div v-if="starList.length == 0">
         <el-row type="flex" align="middle" justify="center" class="loading">
           <p class="muted">无内容</p>

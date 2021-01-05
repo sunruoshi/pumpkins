@@ -31,7 +31,6 @@ import {
   ElBacktop,
   ElPageHeader,
   ElSkeleton,
-  ElLoading,
   ElMessage
 } from "element-plus";
 
@@ -64,7 +63,7 @@ const components = [
   ElTag
 ];
 
-const plugins = [ElLoading, ElMessage];
+const plugins = [ElMessage];
 
 const app = createApp(App);
 
