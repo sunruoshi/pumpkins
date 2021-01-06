@@ -32,41 +32,18 @@
               <span><i class="el-icon-tickets"></i> 价格明细</span>
             </template>
             <el-table :data="chartData.source" stripe size="small">
-              <el-table-column
-                prop="size"
-                label="鞋码"
-                min-width="70"
-                sortable
-                fixed
-              >
+              <el-table-column prop="size" label="鞋码" min-width="70" sortable fixed>
               </el-table-column>
-              <el-table-column
-                prop="stockX"
-                label="StockX"
-                min-width="90"
-                sortable
-              >
+              <el-table-column prop="stockX" label="StockX" min-width="90" sortable>
                 <template v-slot="scope">¥{{ scope.row.stockX }}</template>
               </el-table-column>
               <el-table-column prop="goat" label="Goat" min-width="80" sortable>
                 <template v-slot="scope">¥{{ scope.row.goat }}</template>
               </el-table-column>
-              <el-table-column
-                prop="stadiumGoods"
-                label="StadiumGoods"
-                min-width="130"
-                sortable
-              >
-                <template v-slot="scope"
-                  >¥{{ scope.row.stadiumGoods }}</template
-                >
+              <el-table-column prop="stadiumGoods" label="StadiumGoods" min-width="130" sortable>
+                <template v-slot="scope">¥{{ scope.row.stadiumGoods }}</template>
               </el-table-column>
-              <el-table-column
-                prop="quantity"
-                label="数量"
-                min-width="70"
-                sortable
-              >
+              <el-table-column prop="quantity" label="数量" min-width="70" sortable>
               </el-table-column>
               <el-table-column label="操作" width="100">
                 <template v-slot="scope">

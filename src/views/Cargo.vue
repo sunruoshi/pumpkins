@@ -21,30 +21,13 @@
           justify="start"
           class="row-margin"
         >
-          <el-tag
-            type="info"
-            v-for="index in brandData.length"
-            :key="index"
-            class="tag"
-          >
-            {{ brandData[index - 1].property
-            }}<strong> ¥{{ brandData[index - 1].value }}</strong>
+          <el-tag type="info" v-for="index in brandData.length" :key="index" class="tag">
+            {{ brandData[index - 1].property }}<strong> ¥{{ brandData[index - 1].value }}</strong>
           </el-tag>
         </el-row>
-        <el-row
-          v-if="activeName === 'size'"
-          type="flex"
-          align="middle"
-          justify="start"
-        >
-          <el-tag
-            type="info"
-            v-for="index in sizeData.length"
-            :key="index"
-            class="row-margin tag"
-          >
-            {{ sizeData[index - 1].property
-            }}<strong> ¥{{ sizeData[index - 1].value }}</strong>
+        <el-row v-if="activeName === 'size'" type="flex" align="middle" justify="start">
+          <el-tag type="info" v-for="index in sizeData.length" :key="index" class="row-margin tag">
+            {{ sizeData[index - 1].property }}<strong> ¥{{ sizeData[index - 1].value }}</strong>
           </el-tag>
         </el-row>
         <el-tabs v-model="activeName" type="border-card" class="row-margin">
@@ -58,40 +41,19 @@
                   <el-image :src="scope.row.thumbnail" fit="contain"></el-image>
                 </template>
               </el-table-column>
-              <el-table-column prop="shoeName" label="名称" min-width="160">
+              <el-table-column prop="shoeName" label="名称" min-width="160"> </el-table-column>
+              <el-table-column prop="brand" label="品牌" min-width="80"> </el-table-column>
+              <el-table-column prop="styleID" label="货号" min-width="100" sortable>
               </el-table-column>
-              <el-table-column prop="brand" label="品牌" min-width="80">
-              </el-table-column>
-              <el-table-column
-                prop="styleID"
-                label="货号"
-                min-width="100"
-                sortable
-              >
-              </el-table-column>
-              <el-table-column prop="size" label="鞋码" min-width="70" sortable>
-              </el-table-column>
-              <el-table-column
-                prop="stockX"
-                label="价值"
-                min-width="100"
-                sortable
-              >
+              <el-table-column prop="size" label="鞋码" min-width="70" sortable> </el-table-column>
+              <el-table-column prop="stockX" label="价值" min-width="100" sortable>
                 <template v-slot="scope">¥{{ scope.row.stockX }}</template>
               </el-table-column>
-              <el-table-column
-                prop="quantity"
-                label="数量"
-                min-width="70"
-                sortable
-              >
+              <el-table-column prop="quantity" label="数量" min-width="70" sortable>
               </el-table-column>
               <el-table-column label="操作" width="100">
                 <template v-slot="scope">
-                  <el-button
-                    size="mini"
-                    type="danger"
-                    @click="removeCargoItem(scope.row)"
+                  <el-button size="mini" type="danger" @click="removeCargoItem(scope.row)"
                     >移出仓库</el-button
                   >
                 </template>

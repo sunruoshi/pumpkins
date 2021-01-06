@@ -24,9 +24,7 @@
           </el-row>
         </el-collapse-item>
         <el-collapse-item name="log">
-          <template v-slot:title>
-            <i class="el-icon-odometer"></i>活动日志
-          </template>
+          <template v-slot:title> <i class="el-icon-odometer"></i>活动日志 </template>
           <el-alert
             v-for="(log, index) in consoleLog"
             :key="index"
@@ -39,9 +37,7 @@
           </el-alert>
         </el-collapse-item>
         <el-collapse-item name="info">
-          <template v-slot:title>
-            <i class="el-icon-warning-outline"></i>使用说明
-          </template>
+          <template v-slot:title> <i class="el-icon-warning-outline"></i>使用说明 </template>
           <div class="badge-corner">
             <el-badge value="beta">
               <el-tag type="info" size="medium" effect="dark">仓库</el-tag>
@@ -57,9 +53,7 @@
             </p>
           </div>
           <div>
-            <el-tag type="info" size="medium" effect="dark"
-              >localStorage</el-tag
-            >
+            <el-tag type="info" size="medium" effect="dark">localStorage</el-tag>
             <p>仓库与收藏夹数据同步保存在浏览器localStorage中。</p>
           </div>
           <div>
@@ -72,9 +66,7 @@
           </div>
         </el-collapse-item>
         <el-collapse-item name="about">
-          <template v-slot:title>
-            <i class="header-icon el-icon-cpu"></i>关于此应用
-          </template>
+          <template v-slot:title> <i class="header-icon el-icon-cpu"></i>关于此应用 </template>
           <div>
             <el-badge type="success" value="Vue.js"></el-badge>
             <el-badge type="danger" value="Vuex"></el-badge>
