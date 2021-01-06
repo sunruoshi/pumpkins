@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-card shadow="hover">
-      <el-row type="flex" justify="space-between">
+      <el-row type="flex" justify="space-between" class="card-group">
         <el-button
           circle
           size="mini"
@@ -24,29 +24,15 @@
           @click="removeStar(form)"
         ></el-button>
       </el-row>
-      <el-image :src="form.thumbnail" fit="contain"> </el-image>
+      <el-image :src="form.thumbnail" fit="contain" class="card-group"> </el-image>
       <div>
         <el-row type="flex" justify="space-between" align="middle">
           <span>
-            <el-badge
-              value="StockX 最低"
-              type="success"
-              class="hidden-xs-only"
-            ></el-badge>
-            <strong v-if="form.lowestResellPrice">
-              {{ form.lowestResellPrice.stockX }}</strong
-            >
+            <el-badge value="StockX 最低" type="success" class="hidden-xs-only"></el-badge>
+            <strong v-if="form.lowestResellPrice"> {{ form.lowestResellPrice.stockX }}</strong>
           </span>
-          <el-badge
-            v-if="form.profit"
-            :value="`¥${form.priceVariety}`"
-            type="danger"
-          ></el-badge>
-          <el-badge
-            v-else
-            :value="`¥${form.priceVariety}`"
-            type="info"
-          ></el-badge>
+          <el-badge v-if="form.profit" :value="`¥${form.priceVariety}`" type="danger"></el-badge>
+          <el-badge v-else :value="`¥${form.priceVariety}`" type="info"></el-badge>
         </el-row>
       </div>
     </el-card>
